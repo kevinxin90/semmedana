@@ -28,7 +28,7 @@ def load_data(data_folder):
             group_by_semmantic_dict[_item[-2]].append(_item[-1])
             id_type_mapping[_item[-1]] = {'type': _item[-2], 'name': _item[1]}
     anatomy_related = {}
-    unique_assoc = set()
+    unique_assocs = set()
     with open(edges_path) as f:
         csv_reader = csv.reader(f, delimiter=',')
         next(csv_reader)
